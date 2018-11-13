@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JobRecS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <style>
+    .title{
+      background-color: #3EB276;
+      color: #FFFFFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.5rem;
+    }
+    #maintitle{
+      font-size: 3rem;
+    }
+    .mytext{
+      font-family: 'Raleway', sans-serif;
+      color: #545454;
+      font-size: 1.0rem;
+    }
+    .mybutton{
+      font-family: 'Raleway', sans-serif;
+      border-color: #3EB276;
+      color: #3EB276;
+      font-size: 1.0rem;
+    }
+    .mybutton:hover{
+      color: #fff;
+      background-color: #3EB276;
+      border-color: #3EB276;
+    }
+    
+  </style>
+  <script type="text/javascript">
+    function registered_user()
+    {
+     location.href = "/registered_user";
+    }
+ </script>
+</head>
+<body>
+
+  <div class="jumbotron text-center title">
+    <h1 id="maintitle">JobRecS</h1>
+    <p>Recommending better jobs for you !</p> 
+  </div>
+  
+  <div class="container">
+    <div class="row" >
+      <div class="col-sm-4 mytext text-center">
+        <h3>Better Jobs</h3>
+        <p>Here at JobRecS, you will get better job opportunities.</p>
+        <p></p>
+      </div>
+      <div class="col-sm-4 mytext text-center">
+        <h3>Better Companies</h3>
+        <p>Apply for job at top companies.</p>
+      </div>
+      <div class="col-sm-4 mytext text-center">
+        <h3>Better Recommendations</h3>        
+        <p>Get better job recommendations which will help you grow.</p>
+      </div>
+    </div>
+    <br><br>
+    <div class="row" >
+      <div class="col-sm-12 text-center">
+        <button type="button" class="btn btn-lg btn-outline-success mybutton" onclick="registered_user()">Take Demo</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

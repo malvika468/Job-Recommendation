@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JobRecS | Registered User</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <style>
+    .title{
+      background-color: #3EB276;
+      color: #FFFFFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.5rem;
+    }
+    #maintitle{
+      font-size: 3rem;
+    }
+    .mytext{
+      font-family: 'Raleway', sans-serif;
+      color: #545454;
+      font-size: 1.0rem;
+    }
+    .mybutton{
+      font-family: 'Raleway', sans-serif;
+      border-color: #3EB276;
+      color: #3EB276;
+      font-size: 1.0rem;
+    }
+    .mybutton:hover{
+      color: #fff;
+      background-color: #3EB276;
+      border-color: #3EB276;
+    }
+    .mybg{
+      background-color: #3EB276;
+      font-size: 1.0rem;
+    }
+    .myloginform{
+      background-color: #FFFFFF;
+      font-size: 1.0rem;
+      color: #3EB276;
+      padding: 20px;
+      margin: 0px;
+    }
+    .mypadding{
+      padding: 0px;
+      margin: 50px;
+    }
+  </style>
+  <script type="text/javascript">
+    function registered_user()
+    {
+     location.href = "/registered_user";
+   }
+ </script>
+</head>
+<body>
+
+  <nav class="navbar fixed-top navbar-expand-md mybg navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">JobRecS</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mytext">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/registered_user">Sign In</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/new_user">Sign Up</a>
+        </li>  -->
+      </ul>
+    </div> 
+  </nav>
+  {% if msg != "" %}
+  <br><br><br>
+  <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>{{msg}}</strong>
+</div>
+{% endif %}
+<br><br><br>
+<br><br><br>
+  <div class="container mytext">
+    <div class="row mypadding" >
+      <div class="col-sm-4 text-center"></div>
+      <div class="col-sm-4 text-center">
+        <div class="card text-center card-outline-success mb-3 myloginform">
+          <div class="card-block myloginform">
+            <form method="post" action="/login">
+              <div class="form-group">
+                <label for="uid">User ID</label>
+                <input type="number" class="form-control" id="userid" name="userid">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" class="form-control" id="pwd" name="pwd">
+              </div>
+              <button type="submit" class="btn btn-primary">Log in</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 text-center"></div>
+    </div>   
+  </div>
+</body>
+</html>
